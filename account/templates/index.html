@@ -1,0 +1,16 @@
+{% extends 'base/index.html' %}
+{% block title %}
+    Домашняя страница
+{% endblock %}
+{% block body %}
+    
+<p>{{ user }}</p>
+<p>{{ user.get_full_name }}</p>
+<p>{{ user.email }}</p>
+{% if user.is_authenticated %}
+<p><a href="{% url 'logout' %}">ВЫЙТИ</a></p>
+{% else %}
+<p><a href="{% url 'login' %}">ВОЙТИ</a></p>
+<p><a href="{% url 'register' %}">РЕГИСТРАЦИЯ</a></p>
+{% endif %}
+{% endblock %}

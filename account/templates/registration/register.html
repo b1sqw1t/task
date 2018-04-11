@@ -1,0 +1,26 @@
+{% extends 'base/index.html' %}
+   {% block title %}
+        Регистрация пользователя
+    {% endblock %}
+
+{% block body %}
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {% for field in form %}
+            <tr>
+                <td>{{field.label}}</td>
+                <td>{{field}}</td>
+                <td>{{field.errors}}</td>
+
+            </tr>
+        {% endfor %}
+<tr>
+    <td></td>
+    <td>    <input type="submit" value="Зарегистрироваться">
+
+</td>
+</tr>
+    </table>
+</form>
+{% endblock %}

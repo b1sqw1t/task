@@ -1,0 +1,7 @@
+*.pyc
+__pycache__
+account/__pycache__
+task/__pycache__
+test
+.idea/
+*.whl
